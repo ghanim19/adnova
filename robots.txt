@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://adnova.netlify.app/sitemap.xml
