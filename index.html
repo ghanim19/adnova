@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AD Nova - منصة تسويق رقمي احترافية تقدم حلولًا مبتكرة للشركات الناشئة والمتوسطة لتعزيز حضورها الرقمي.">
+    <meta name="keywords" content="تسويق رقمي, إدارة حسابات, تصميمات إبداعية, إعلانات Google, باقات تسويق, SEO, تحليلات">
+    <meta name="author" content="AD Nova Team">
+    <meta name="robots" content="index, follow">
+    <title>AD Nova - منصة تسويق رقمي احترافية</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXX-X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-XXXXXXX-X');
+    </script>
+</head>
+<body>
+    <!-- شريط التقدم -->
+    <div id="progress-bar"></div>
+
+    <!-- القائمة العلوية -->
+    <header>
+        <div class="logo">
+            <img src="assets/logo.png" alt="شعار AD Nova" loading="lazy">
+        </div>
+        <nav>
+            <ul id="nav-list">
+                <li><a href="#intro" onclick="trackEvent('Navigation', 'Click', 'المقدمة')"><i class="fas fa-home"></i> المقدمة</a></li>
+                <li><a href="#about" onclick="trackEvent('Navigation', 'Click', 'من نحن')"><i class="fas fa-users"></i> من نحن</a></li>
+                <li><a href="#vision" onclick="trackEvent('Navigation', 'Click', 'رؤيتنا')"><i class="fas fa-eye"></i> رؤيتنا</a></li>
+                <li><a href="#mission" onclick="trackEvent('Navigation', 'Click', 'رسالتنا')"><i class="fas fa-bullseye"></i> رسالتنا</a></li>
+                <li><a href="#goals" onclick="trackEvent('Navigation', 'Click', 'أهدافنا')"><i class="fas fa-chart-line"></i> أهدافنا</a></li>
+                <li><a href="#competitive-edge" onclick="trackEvent('Navigation', 'Click', 'ميزتنا')"><i class="fas fa-trophy"></i> ميزتنا</a></li>
+                <li><a href="#services" onclick="trackEvent('Navigation', 'Click', 'خدماتنا')"><i class="fas fa-cogs"></i> خدماتنا</a></li>
+                <li><a href="#packages" onclick="trackEvent('Navigation', 'Click', 'باقاتنا')"><i class="fas fa-box"></i> باقاتنا</a></li>
+                <li><a href="#portfolio" onclick="trackEvent('Navigation', 'Click', 'معرض الأعمال')"><i class="fas fa-briefcase"></i> معرض الأعمال</a></li>
+                <li><a href="#testimonials" onclick="trackEvent('Navigation', 'Click', 'آراء العملاء')"><i class="fas fa-star"></i> آراء العملاء</a></li>
+                <li><a href="#contact" onclick="trackEvent('Navigation', 'Click', 'تواصل معنا')"><i class="fas fa-envelope"></i> تواصل معنا</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- قسم المقدمة -->
+    <section id="intro" class="full-section animate-section">
+        <video autoplay muted loop class="bg-video">
+            <source src="assets/intro-video.mp4" type="video/mp4">
+            متصفحك لا يدعم تشغيل الفيديو.
+        </video>
+        <div class="intro-content">
+            <h1><i class="fas fa-rocket"></i> مرحبًا بكم في AD Nova</h1>
+            <p>نصنع النجاح الرقمي لعلامتك التجارية. نحن منصة شبابية بدأت كمشروع تخرج وأصبحت اليوم رائدة في عالم التسويق الرقمي.</p>
+            <a href="#about" class="btn" onclick="trackEvent('Intro', 'Click', 'اكتشف المزيد')">اكتشف المزيد</a>
+        </div>
+    </section>
+
+    <!-- قسم من نحن -->
+    <section id="about" class="full-section animate-section">
+        <h2><i class="fas fa-users"></i> من نحن</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>AD Nova هي منصة تسويق رقمي مبتكرة تأسست في عام 2020 كمشروع تخرج طموح. اليوم، نحن فريق من المحترفين الشباب الذين يجمعون بين الإبداع والخبرة لتقديم حلول تسويقية متكاملة.</p>
+                <p>يتكون فريقنا من خبراء في التسويق الرقمي، التصميم الجرافيكي، تحليل البيانات، والبرمجة، ونعمل معًا لتحقيق أهداف عملائنا بأعلى معايير الجودة.</p>
+            </div>
+            <div class="about-team">
+                <div class="team-member">
+                    <img src="assets/team1.jpg" alt="أحمد محمد - مؤسس ورئيس تنفيذي" loading="lazy">
+                    <h4>أحمد محمد</h4>
+                    <p>مؤسس ورئيس تنفيذي</p>
+                </div>
+                <div class="team-member">
+                    <img src="assets/team2.jpg" alt="سارة علي - مديرة التسويق" loading="lazy">
+                    <h4>سارة علي</h4>
+                    <p>مديرة التسويق</p>
+                </div>
+                <div class="team-member">
+                    <img src="assets/team3.jpg" alt="خالد حسن - خبير Google Ads" loading="lazy">
+                    <h4>خالد حسن</h4>
+                    <p>خبير Google Ads</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الرؤية -->
+    <section id="vision" class="full-section animate-section">
+        <h2><i class="fas fa-eye"></i> رؤيتنا</h2>
+        <div class="vision-content">
+            <p>أن نكون الخيار الأول للشركات الناشئة والمتوسطة في التسويق الرقمي، مقدمين حلولًا مبتكرة تدفع عجلة النمو في المنطقة.</p>
+        </div>
+    </section>
+
+    <!-- قسم الرسالة -->
+    <section id="mission" class="full-section animate-section">
+        <h2><i class="fas fa-bullseye"></i> رسالتنا</h2>
+        <div class="mission-content">
+            <p>تقديم خدمات تسويقية ذكية ومخصصة تعزز من حضور العلامات التجارية وتحقق أهدافها بفعالية وكفاءة.</p>
+        </div>
+    </section>
+
+    <!-- قسم الأهداف -->
+    <section id="goals" class="full-section animate-section">
+        <h2><i class="fas fa-chart-line"></i> أهدافنا</h2>
+        <div class="goals-content">
+            <div class="goal">
+                <i class="fas fa-globe"></i>
+                <h3>حضور رقمي قوي</h3>
+                <p>نبني لعملائنا تواجدًا رقميًا متميزًا يعكس رؤيتهم.</p>
+            </div>
+            <div class="goal">
+                <i class="fas fa-ad"></i>
+                <h3>حملات إعلانية ناجحة</h3>
+                <p>نصمم حملات مستهدفة تحقق أعلى عائد استثماري.</p>
+            </div>
+            <div class="goal">
+                <i class="fas fa-lightbulb"></i>
+                <h3>محتوى إبداعي</h3>
+                <p>نقدم محتوى جذاب يعزز التفاعل مع الجمهور.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الميزة التنافسية -->
+    <section id="competitive-edge" class="full-section animate-section">
+        <h2><i class="fas fa-trophy"></i> ميزتنا التنافسية</h2>
+        <div class="edge-content">
+            <div class="edge-item">
+                <i class="fab fa-google"></i>
+                <h3>خبرة Google Ads</h3>
+                <p>نمتلك خبرة عميقة في إدارة حملات Google Ads بنجاح.</p>
+            </div>
+            <div class="edge-item">
+                <i class="fas fa-users-cog"></i>
+                <h3>إدارة احترافية</h3>
+                <p>نقدم إدارة متكاملة للسوشيال ميديا بأعلى المعايير.</p>
+            </div>
+            <div class="edge-item">
+                <i class="fas fa-clock"></i>
+                <h3>سرعة التنفيذ</h3>
+                <p>نحقق النتائج بسرعة وكفاءة عالية.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الخدمات -->
+    <section id="services" class="full-section animate-section">
+        <h2><i class="fas fa-cogs"></i> خدماتنا</h2>
+        <div class="services-content">
+            <div class="service-card">
+                <i class="fas fa-users"></i>
+                <h3>إدارة حسابات التواصل</h3>
+                <p>إدارة احترافية لمنصاتك الاجتماعية لتعزيز حضورك.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-paint-brush"></i>
+                <h3>تصميمات إبداعية</h3>
+                <p>تصميمات بصرية تعكس هوية علامتك بأناقة.</p>
+            </div>
+            <div class="service-card">
+                <i class="fab fa-google"></i>
+                <h3>إعلانات Google</h3>
+                <p>حملات إعلانية مستهدفة لزيادة مبيعاتك.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الباقات -->
+    <section id="packages" class="full-section animate-section">
+        <h2><i class="fas fa-box"></i> باقاتنا</h2>
+        <div class="packages-content">
+            <div class="package-card basic">
+                <h3>الباقة الأساسية</h3>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> إدارة Instagram وFacebook</li>
+                    <li><i class="fas fa-check-circle"></i> 4 منشورات شهرية</li>
+                    <li><i class="fas fa-check-circle"></i> تقرير أداء شهري</li>
+                </ul>
+                <p class="price">500 ريال/شهر</p>
+                <a href="#contact" class="btn package-btn" onclick="trackEvent('Packages', 'Click', 'الباقة الأساسية')">اختر الباقة</a>
+            </div>
+            <div class="package-card advanced">
+                <h3>الباقة المتقدمة</h3>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> إدارة Instagram + Facebook + TikTok</li>
+                    <li><i class="fas fa-check-circle"></i> 8 منشورات شهرية</li>
+                    <li><i class="fas fa-check-circle"></i> تصميمات بصرية مميزة</li>
+                    <li><i class="fas fa-check-circle"></i> تقرير أداء مفصل</li>
+                </ul>
+                <p class="price">1000 ريال/شهر</p>
+                <a href="#contact" class="btn package-btn" onclick="trackEvent('Packages', 'Click', 'الباقة المتقدمة')">اختر الباقة</a>
+            </div>
+            <div class="package-card vip">
+                <h3>باقة VIP</h3>
+                <span class="popular-tag"><i class="fas fa-star"></i> الأكثر شيوعًا</span>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> إدارة كاملة لجميع المنصات</li>
+                    <li><i class="fas fa-check-circle"></i> حملات Google Ads</li>
+                    <li><i class="fas fa-check-circle"></i> تصميمات احترافية يومية</li>
+                    <li><i class="fas fa-check-circle"></i> تحليلات متقدمة وتقارير أسبوعية</li>
+                </ul>
+                <p class="price">2000 ريال/شهر</p>
+                <a href="#contact" class="btn package-btn" onclick="trackEvent('Packages', 'Click', 'باقة VIP')">اختر الباقة</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم معرض الأعمال -->
+    <section id="portfolio" class="full-section animate-section">
+        <h2><i class="fas fa-briefcase"></i> معرض الأعمال</h2>
+        <div class="portfolio-gallery">
+            <a href="assets/work1.jpg.jpeg" data-lightbox="portfolio" data-title="مشروع 1 - حملة إعلانية">
+                <img src="assets/work1.jpg.jpeg" alt="مشروع 1 - حملة إعلانية" loading="lazy">
+            </a>
+            <a href="assets/work2.jpg.jpeg" data-lightbox="portfolio" data-title="مشروع 2 - تصميم بصري">
+                <img src="assets/work2.jpg.jpeg" alt="مشروع 2 - تصميم بصري" loading="lazy">
+            </a>
+            <a href="assets/work3.jpg.jpeg" data-lightbox="portfolio" data-title="مشروع 3 - إدارة حسابات">
+                <img src="assets/work3.jpg.jpeg" alt="مشروع 3 - إدارة حسابات" loading="lazy">
+            </a>
+            <a href="assets/work4.jpg.jpeg" data-lightbox="portfolio" data-title="مشروع 4 - إدارة حسابات">
+                <img src="assets/work4.jpg.jpeg" alt="مشروع 4 - إدارة حسابات" loading="lazy">
+            </a>
+            <a href="assets/work5.jpg.jpeg" data-lightbox="portfolio" data-title="مشروع 5 - إدارة حسابات">
+                <img src="assets/work5.jpg.jpeg" alt="مشروع 5 - إدارة حسابات" loading="lazy">
+            </a>
+        </div>
+    </section>
+
+    <!-- قسم آراء العملاء -->
+    <section id="testimonials" class="full-section animate-section">
+        <h2><i class="fas fa-star"></i> آراء العملاء</h2>
+        <div class="testimonials-slider">
+            <div class="testimonial">
+                <p>"خدمة ممتازة ساعدتنا على زيادة التفاعل بشكل كبير!"</p>
+                <h4>محمد أحمد</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+            <div class="testimonial">
+                <p>"تصميمات رائعة وحملات ناجحة جدًا!"</p>
+                <h4>سارة علي</h4>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم التواصل -->
+    <section id="contact" class="full-section animate-section">
+        <h2><i class="fas fa-envelope"></i> تواصل معنا</h2>
+        <form id="contact-form">
+            <div class="form-group">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="الاسم" required>
+            </div>
+            <div class="form-group">
+                <i class="fas fa-envelope"></i>
+                <input type="email" placeholder="البريد الإلكتروني" required>
+            </div>
+            <div class="form-group">
+                <i class="fas fa-phone"></i>
+                <input type="tel" placeholder="رقم الهاتف" required>
+            </div>
+            <div class="form-group">
+                <i class="fas fa-comment"></i>
+                <textarea placeholder="رسالتك" required></textarea>
+            </div>
+            <button type="submit" onclick="trackEvent('Contact', 'Submit', 'إرسال رسالة')"><i class="fas fa-paper-plane"></i> إرسال</button>
+        </form>
+    </section>
+
+    <!-- الفوتر -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3><i class="fas fa-phone"></i> اتصل بنا</h3>
+                <p>+966 123 456 789</p>
+                <p>info@adnova.com</p>
+            </div>
+            <div class="footer-section">
+                <h3><i class="fas fa-share-alt"></i> تابعنا</h3>
+                <div class="social-icons">
+                    <a href="#" onclick="trackEvent('Social', 'Click', 'Facebook')"><i class="fab fa-facebook"></i></a>
+                    <a href="#" onclick="trackEvent('Social', 'Click', 'Instagram')"><i class="fab fa-instagram"></i></a>
+                    <a href="#" onclick="trackEvent('Social', 'Click', 'Twitter')"><i class="fab fa-twitter"></i></a>
+                    <a href="#" onclick="trackEvent('Social', 'Click', 'LinkedIn')"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2023 AD Nova. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <!-- زر العودة للأعلى -->
+    <button id="scroll-top" title="العودة للأعلى"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
