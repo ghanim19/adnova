@@ -1,319 +1,691 @@
 <!DOCTYPE html>
-<html dir="rtl" lang="ar">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AD Nova - منصة تسويق رقمي احترافية تقدم حلولًا مبتكرة للشركات الناشئة والمتوسطة لتعزيز حضورها الرقمي.">
-    <meta name="keywords" content="تسويق رقمي, إدارة حسابات, تصميمات إبداعية, إعلانات Google, باقات تسويق, SEO, تحليلات">
-    <meta name="author" content="AD Nova Team">
-    <meta name="robots" content="index, follow">
-    <title>AD Nova - منصة تسويق رقمي احترافية</title>
-    <link rel="stylesheet" href="style/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css">
-    <meta name="google-site-verification" content="FsdXkrl0OhXCmg59lgl6rXJr3GF55NQbdj4ihBm5j50" />
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXX-X"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-XXXXXXX-X');
-    </script>
+    <title>Ad Nova - وكالة تسويق رقمي احترافية</title>
+    <meta name="description" content="Ad Nova هي وكالة تسويق رقمي رائدة في نابلس، فلسطين، تقدم حلولاً مبتكرة لنمو أعمالك عبر الإنترنت.">
+    <meta name="keywords" content="تسويق رقمي, فلسطين, نابلس, Ad Nova, SEO, إدارة حسابات, تصميم مواقع, إعلانات جوجل">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/Logo.png" type="image/png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- AOS Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    
+    <!-- Lightbox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+
+    <!-- Slick Carousel CSS (for testimonials) -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- شريط التقدم -->
-    <div id="progress-bar"></div>
 
-    <!-- القائمة العلوية -->
-    <header>
-        <div class="logo">
-            <img src="assets/logo.png" alt="شعار AD Nova" loading="lazy">
-        </div>
-        <nav>
-            <ul id="nav-list">
-                <li><a href="#intro" onclick="trackEvent('Navigation', 'Click', 'المقدمة')"><i class="fas fa-home"></i> المقدمة</a></li>
-                <li><a href="#about" onclick="trackEvent('Navigation', 'Click', 'من نحن')"><i class="fas fa-users"></i> من نحن</a></li>
-                <li><a href="#vision" onclick="trackEvent('Navigation', 'Click', 'رؤيتنا')"><i class="fas fa-eye"></i> رؤيتنا</a></li>
-                <li><a href="#mission" onclick="trackEvent('Navigation', 'Click', 'رسالتنا')"><i class="fas fa-bullseye"></i> رسالتنا</a></li>
-                <li><a href="#goals" onclick="trackEvent('Navigation', 'Click', 'أهدافنا')"><i class="fas fa-chart-line"></i> أهدافنا</a></li>
-                <li><a href="#competitive-edge" onclick="trackEvent('Navigation', 'Click', 'ميزتنا')"><i class="fas fa-trophy"></i> ميزتنا</a></li>
-                <li><a href="#services" onclick="trackEvent('Navigation', 'Click', 'خدماتنا')"><i class="fas fa-cogs"></i> خدماتنا</a></li>
-                <li><a href="#packages" onclick="trackEvent('Navigation', 'Click', 'باقاتنا')"><i class="fas fa-box"></i> باقاتنا</a></li>
-                <li><a href="#portfolio" onclick="trackEvent('Navigation', 'Click', 'معرض الأعمال')"><i class="fas fa-briefcase"></i> معرض الأعمال</a></li>
-                <li><a href="#testimonials" onclick="trackEvent('Navigation', 'Click', 'آراء العملاء')"><i class="fas fa-star"></i> آراء العملاء</a></li>
-                <li><a href="#contact" onclick="trackEvent('Navigation', 'Click', 'تواصل معنا')"><i class="fas fa-envelope"></i> تواصل معنا</a></li>
-            </ul>
-            <div class="hamburger" id="hamburger">
-                <i class="fas fa-bars"></i>
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <img src="assets/Logo.png" alt="Ad Nova Logo">
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#intro">الرئيسية</a></li>
+                    <li><a href="#about">من نحن</a></li>
+                    <li><a href="#services">خدماتنا</a></li>
+                    <li><a href="#portfolio">أعمالنا</a></li>
+                    <li><a href="#team">فريقنا</a></li> <!-- Added Team Link -->
+                    <li><a href="#testimonials">آراء العملاء</a></li> <!-- Added Testimonials Link -->
+                    <li><a href="#packages">الباقات</a></li>
+                    <li><a href="#faq">الأسئلة الشائعة</a></li>
+                    <li><a href="#contact">تواصل معنا</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-        </nav>
+        </div>
     </header>
 
-    <!-- قسم المقدمة -->
-    <section id="intro" class="full-section animate-section">
-        <video autoplay muted loop class="bg-video">
-            <source src="assets/intro-video.mp4" type="video/mp4">
-            متصفحك لا يدعم تشغيل الفيديو.
-        </video>
-        <div class="intro-content">
-            <h1><i class="fas fa-rocket"></i> مرحبًا بكم في AD Nova</h1>
-            <p>نصنع النجاح الرقمي لعلامتك التجارية. نحن منصة شبابية بدأت كمشروع تخرج وأصبحت اليوم رائدة في عالم التسويق الرقمي.</p>
-            <a href="#about" class="btn" onclick="trackEvent('Intro', 'Click', 'اكتشف المزيد')">اكتشف المزيد</a>
+    <!-- Intro Section -->
+    <section id="intro" class="intro">
+         <div class="intro-overlay"></div> <!-- Added overlay for better text readability -->
+        <div class="container intro-content" data-aos="fade-up">
+            <h1>وكالة Ad Nova للتسويق الرقمي</h1>
+            <p class="intro-subtitle">نساعدك على تحقيق أهدافك التسويقية بأحدث الاستراتيجيات الرقمية في نابلس وفلسطين.</p>
+            <div class="cta-buttons">
+                <a href="#services" class="btn btn-primary">اكتشف خدماتنا</a>
+                <a href="#contact" class="btn btn-outline">تواصل معنا الآن</a>
+            </div>
         </div>
+        <a href="#about" class="scroll-down" aria-label="Scroll down">
+            <i class="fas fa-chevron-down fa-2x"></i>
+        </a>
     </section>
 
-    <!-- قسم من نحن -->
-    <section id="about" class="full-section animate-section">
-        <h2><i class="fas fa-users"></i> من نحن</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <p>AD Nova هي منصة تسويق رقمي مبتكرة تأسست في عام 2020 كمشروع تخرج طموح. اليوم، نحن فريق من المحترفين الشباب الذين يجمعون بين الإبداع والخبرة لتقديم حلول تسويقية متكاملة.</p>
-                <p>يتكون فريقنا من خبراء في التسويق الرقمي، التصميم الجرافيكي، تحليل البيانات، والبرمجة، ونعمل معًا لتحقيق أهداف عملائنا بأعلى معايير الجودة.</p>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>من نحن</h2>
+                <p>شريكك الاستراتيجي للنجاح في عالم التسويق الرقمي.</p>
             </div>
-            <div class="about-team">
-                <div class="team-member">
-                    <img src="assets/team1.jpg" alt="أحمد محمد - مؤسس ورئيس تنفيذي" loading="lazy">
-                    <h4>أحمد محمد</h4>
-                    <p>مؤسس ورئيس تنفيذي</p>
+            <div class="about-content">
+                <div class="about-image" data-aos="fade-right">
+                    <!-- Using one of the downloaded images -->
+                    <img src="images/marketing_strategy_meeting.jpeg" alt="فريق عمل Ad Nova في اجتماع">
                 </div>
-                <div class="team-member">
-                    <img src="assets/team2.jpg" alt="سارة علي - مديرة التسويق" loading="lazy">
-                    <h4>سارة علي</h4>
-                    <p>مديرة التسويق</p>
-                </div>
-                <div class="team-member">
-                    <img src="assets/team3.jpg" alt="خالد حسن - خبير Google Ads" loading="lazy">
-                    <h4>خالد حسن</h4>
-                    <p>خبير Google Ads</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- قسم الرؤية -->
-    <section id="vision" class="full-section animate-section">
-        <h2><i class="fas fa-eye"></i> رؤيتنا</h2>
-        <div class="vision-content">
-            <p>أن نكون الخيار الأول للشركات الناشئة والمتوسطة في التسويق الرقمي، مقدمين حلولًا مبتكرة تدفع عجلة النمو في المنطقة.</p>
-        </div>
-    </section>
-
-    <!-- قسم الرسالة -->
-    <section id="mission" class="full-section animate-section">
-        <h2><i class="fas fa-bullseye"></i> رسالتنا</h2>
-        <div class="mission-content">
-            <p>تقديم خدمات تسويقية ذكية ومخصصة تعزز من حضور العلامات التجارية وتحقق أهدافها بفعالية وكفاءة.</p>
-        </div>
-    </section>
-
-    <!-- قسم الأهداف -->
-    <section id="goals" class="full-section animate-section">
-        <h2><i class="fas fa-chart-line"></i> أهدافنا</h2>
-        <div class="goals-content">
-            <div class="goal">
-                <i class="fas fa-globe"></i>
-                <h3>حضور رقمي قوي</h3>
-                <p>نبني لعملائنا تواجدًا رقميًا متميزًا يعكس رؤيتهم.</p>
-            </div>
-            <div class="goal">
-                <i class="fas fa-ad"></i>
-                <h3>حملات إعلانية ناجحة</h3>
-                <p>نصمم حملات مستهدفة تحقق أعلى عائد استثماري.</p>
-            </div>
-            <div class="goal">
-                <i class="fas fa-lightbulb"></i>
-                <h3>محتوى إبداعي</h3>
-                <p>نقدم محتوى جذاب يعزز التفاعل مع الجمهور.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- قسم الميزة التنافسية -->
-    <section id="competitive-edge" class="full-section animate-section">
-        <h2><i class="fas fa-trophy"></i> ميزتنا التنافسية</h2>
-        <div class="edge-content">
-            <div class="edge-item">
-                <i class="fab fa-google"></i>
-                <h3>خبرة Google Ads</h3>
-                <p>نمتلك خبرة عميقة في إدارة حملات Google Ads بنجاح.</p>
-            </div>
-            <div class="edge-item">
-                <i class="fas fa-users-cog"></i>
-                <h3>إدارة احترافية</h3>
-                <p>نقدم إدارة متكاملة للسوشيال ميديا بأعلى المعايير.</p>
-            </div>
-            <div class="edge-item">
-                <i class="fas fa-clock"></i>
-                <h3>سرعة التنفيذ</h3>
-                <p>نحقق النتائج بسرعة وكفاءة عالية.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- قسم الخدمات -->
-    <section id="services" class="full-section animate-section">
-        <h2><i class="fas fa-cogs"></i> خدماتنا</h2>
-        <div class="services-content">
-            <div class="service-card">
-                <i class="fas fa-users"></i>
-                <h3>إدارة حسابات التواصل</h3>
-                <p>إدارة احترافية لمنصاتك الاجتماعية لتعزيز حضورك.</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-paint-brush"></i>
-                <h3>تصميمات إبداعية</h3>
-                <p>تصميمات بصرية تعكس هوية علامتك بأناقة.</p>
-            </div>
-            <div class="service-card">
-                <i class="fab fa-google"></i>
-                <h3>إعلانات Google</h3>
-                <p>حملات إعلانية مستهدفة لزيادة مبيعاتك.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- قسم الباقات -->
-    <section id="packages" class="full-section animate-section">
-        <h2><i class="fas fa-box"></i> باقاتنا</h2>
-        <div class="packages-content">
-            <div class="package-card basic">
-                <h3>الباقة الأساسية</h3>
-                <ul>
-                    <li><i class="fas fa-check-circle"></i> إدارة Instagram وFacebook</li>
-                    <li><i class="fas fa-check-circle"></i> 4 منشورات شهرية</li>
-                    <li><i class="fas fa-check-circle"></i> تقرير أداء شهري</li>
-                </ul>
-                <p class="price">500 ريال/شهر</p>
-                <a href="#contact" class="btn package-btn" onclick="trackEvent('Packages', 'Click', 'الباقة الأساسية')">اختر الباقة</a>
-            </div>
-            <div class="package-card advanced">
-                <h3>الباقة المتقدمة</h3>
-                <ul>
-                    <li><i class="fas fa-check-circle"></i> إدارة Instagram + Facebook + TikTok</li>
-                    <li><i class="fas fa-check-circle"></i> 8 منشورات شهرية</li>
-                    <li><i class="fas fa-check-circle"></i> تصميمات بصرية مميزة</li>
-                    <li><i class="fas fa-check-circle"></i> تقرير أداء مفصل</li>
-                </ul>
-                <p class="price">1000 ريال/شهر</p>
-                <a href="#contact" class="btn package-btn" onclick="trackEvent('Packages', 'Click', 'الباقة المتقدمة')">اختر الباقة</a>
-            </div>
-            <div class="package-card vip">
-                <h3>باقة VIP</h3>
-                <span class="popular-tag"><i class="fas fa-star"></i> الأكثر شيوعًا</span>
-                <ul>
-                    <li><i class="fas fa-check-circle"></i> إدارة كاملة لجميع المنصات</li>
-                    <li><i class="fas fa-check-circle"></i> حملات Google Ads</li>
-                    <li><i class="fas fa-check-circle"></i> تصميمات احترافية يومية</li>
-                    <li><i class="fas fa-check-circle"></i> تحليلات متقدمة وتقارير أسبوعية</li>
-                </ul>
-                <p class="price">2000 ريال/شهر</p>
-                <a href="#contact" class="btn package-btn" onclick="trackEvent('Packages', 'Click', 'باقة VIP')">اختر الباقة</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- قسم معرض الأعمال -->
-    <section id="portfolio" class="full-section animate-section">
-        <h2><i class="fas fa-briefcase"></i> معرض الأعمال</h2>
-        <div class="portfolio-gallery">
-            <a href="assets/work1.jpg.jpeg" data-lightbox="portfolio" data-title="مشروع 1 - حملة إعلانية">
-                <img src="assets/work1.jpg.jpeg" alt="مشروع 1 - حملة إعلانية" loading="lazy">
-            </a>
-            <a href="assets/work2.jpg.jpeg" data-lightbox="portfolio" data-title="مشروع 2 - تصميم بصري">
-                <img src="assets/work2.jpg.jpeg" alt="مشروع 2 - تصميم بصري" loading="lazy">
-            </a>
-            <a href="assets/work3.jpg.jpeg" data-lightbox="portfolio" data-title="مشروع 3 - إدارة حسابات">
-                <img src="assets/work3.jpg.jpeg" alt="مشروع 3 - إدارة حسابات" loading="lazy">
-            </a>
-            <a href="assets/work4.jpg.jpeg" data-lightbox="portfolio" data-title="مشروع 4 - إدارة حسابات">
-                <img src="assets/work4.jpg.jpeg" alt="مشروع 4 - إدارة حسابات" loading="lazy">
-            </a>
-            <a href="assets/work5.jpg.jpeg" data-lightbox="portfolio" data-title="مشروع 5 - إدارة حسابات">
-                <img src="assets/work5.jpg.jpeg" alt="مشروع 5 - إدارة حسابات" loading="lazy">
-            </a>
-        </div>
-    </section>
-
-    <!-- قسم آراء العملاء -->
-    <section id="testimonials" class="full-section animate-section">
-        <h2><i class="fas fa-star"></i> آراء العملاء</h2>
-        <div class="testimonials-slider">
-            <div class="testimonial">
-                <p>"خدمة ممتازة ساعدتنا على زيادة التفاعل بشكل كبير!"</p>
-                <h4>محمد أحمد</h4>
-                <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-            </div>
-            <div class="testimonial">
-                <p>"تصميمات رائعة وحملات ناجحة جدًا!"</p>
-                <h4>سارة علي</h4>
-                <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
+                <div class="about-text" data-aos="fade-left">
+                    <h3>مهمتنا: تمكين نمو أعمالك الرقمية</h3>
+                    <p>في Ad Nova، نؤمن بقوة التسويق الرقمي في تحويل الأعمال. نحن فريق من الخبراء المتخصصين في نابلس، فلسطين، ملتزمون بتقديم حلول تسويقية مبتكرة وفعالة تساعد عملائنا على تحقيق نتائج ملموسة وزيادة تواجدهم الرقمي.</p>
+                    <p>نحن نجمع بين الإبداع والتحليل لإنشاء حملات تسويقية مخصصة تلبي احتياجات كل عميل، مع التركيز على الشفافية والنتائج القابلة للقياس.</p>
+                    <div class="about-stats">
+                        <div class="stat-item" data-aos="zoom-in" data-aos-delay="100">
+                             <div class="stat-icon"><i class="fas fa-users"></i></div>
+                            <div class="stat-number">+50</div>
+                            <div class="stat-label">عميل سعيد</div>
+                        </div>
+                        <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
+                             <div class="stat-icon"><i class="fas fa-project-diagram"></i></div>
+                            <div class="stat-number">+100</div>
+                            <div class="stat-label">مشروع مكتمل</div>
+                        </div>
+                        <div class="stat-item" data-aos="zoom-in" data-aos-delay="300">
+                             <div class="stat-icon"><i class="fas fa-calendar-alt"></i></div>
+                            <div class="stat-number">+5</div>
+                            <div class="stat-label">سنوات خبرة</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- قسم التواصل -->
-    <section id="contact" class="full-section animate-section">
-        <h2><i class="fas fa-envelope"></i> تواصل معنا</h2>
-        <form id="contact-form">
-            <div class="form-group">
-                <i class="fas fa-user"></i>
-                <input type="text" placeholder="الاسم" required>
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>خدماتنا</h2>
+                <p>نقدم مجموعة متكاملة من خدمات التسويق الرقمي لدعم أعمالك.</p>
             </div>
-            <div class="form-group">
-                <i class="fas fa-envelope"></i>
-                <input type="email" placeholder="البريد الإلكتروني" required>
+            <div class="services-grid">
+                <!-- Service Card 1 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon-wrapper">
+                        <i class="fas fa-bullhorn service-icon-main"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>إدارة حسابات التواصل الاجتماعي</h3>
+                        <p>بناء حضور قوي وتفاعلي لعلامتك التجارية على منصات التواصل الاجتماعي.</p>
+                        <a href="#contact" class="btn btn-outline btn-small">اطلب الخدمة</a>
+                    </div>
+                </div>
+                 <!-- Service Card 2 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                     <div class="service-icon-wrapper">
+                        <i class="fas fa-palette service-icon-main"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>تصميم الهويات البصرية</h3>
+                        <p>تصميم شعارات وهوية بصرية احترافية تعكس قيم علامتك التجارية.</p>
+                        <a href="#contact" class="btn btn-outline btn-small">اطلب الخدمة</a>
+                    </div>
+                </div>
+                 <!-- Service Card 3 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                     <div class="service-icon-wrapper">
+                        <i class="fab fa-google service-icon-main"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>حملات Google Ads</h3>
+                        <p>زيادة الوصول لجمهورك المستهدف وتحقيق أفضل النتائج عبر إعلانات جوجل.</p>
+                        <a href="#contact" class="btn btn-outline btn-small">اطلب الخدمة</a>
+                    </div>
+                </div>
+                 <!-- Service Card 4 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                     <div class="service-icon-wrapper">
+                        <i class="fas fa-laptop-code service-icon-main"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>تصميم وتطوير المواقع</h3>
+                        <p>إنشاء مواقع ويب احترافية، سريعة الاستجابة، ومتوافقة مع محركات البحث.</p>
+                        <a href="#contact" class="btn btn-outline btn-small">اطلب الخدمة</a>
+                    </div>
+                </div>
+                 <!-- Service Card 5 -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                     <div class="service-icon-wrapper">
+                        <i class="fas fa-chart-line service-icon-main"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>تحسين محركات البحث (SEO)</h3>
+                        <p>تحسين ترتيب موقعك في نتائج البحث لزيادة الزيارات العضوية.</p>
+                        <a href="#contact" class="btn btn-outline btn-small">اطلب الخدمة</a>
+                    </div>
+                </div>
+                 <!-- Service Card 6 -->
+                 <div class="service-card" data-aos="fade-up" data-aos-delay="600">
+                     <div class="service-icon-wrapper">
+                        <i class="fas fa-video service-icon-main"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>إنتاج الفيديو والموشن جرافيك</h3>
+                        <p>إنشاء محتوى مرئي جذاب واحترافي لعلامتك التجارية.</p>
+                        <a href="#contact" class="btn btn-outline btn-small">اطلب الخدمة</a>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <i class="fas fa-phone"></i>
-                <input type="tel" placeholder="رقم الهاتف" required>
-            </div>
-            <div class="form-group">
-                <i class="fas fa-comment"></i>
-                <textarea placeholder="رسالتك" required></textarea>
-            </div>
-            <button type="submit" onclick="trackEvent('Contact', 'Submit', 'إرسال رسالة')"><i class="fas fa-paper-plane"></i> إرسال</button>
-        </form>
+        </div>
     </section>
 
-    <!-- الفوتر -->
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>معرض أعمالنا</h2>
+                <p>شاهد بعض المشاريع التي نفخر بها والتي تعكس جودة عملنا.</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item web" data-aos="zoom-in">
+                    <div class="portfolio-image" style="background-image: url(\'assets/work1.jpg.jpeg\');"></div>
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category">تصميم مواقع</span>
+                        <h3 class="portfolio-title">مشروع موقع تجاري</h3>
+                        <div class="portfolio-buttons">
+                            <a href="assets/work1.jpg.jpeg" data-lightbox="portfolio" data-title="مشروع موقع تجاري" class="portfolio-button"><i class="fas fa-search-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item branding" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="portfolio-image" style="background-image: url(\'assets/work2.jpg.jpeg\');"></div>
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category">هوية بصرية</span>
+                        <h3 class="portfolio-title">تصميم هوية لشركة ناشئة</h3>
+                        <div class="portfolio-buttons">
+                            <a href="assets/work2.jpg.jpeg" data-lightbox="portfolio" data-title="تصميم هوية لشركة ناشئة" class="portfolio-button"><i class="fas fa-search-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item social" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="portfolio-image" style="background-image: url(\'assets/work3.jpg.jpeg\');"></div>
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category">تواصل اجتماعي</span>
+                        <h3 class="portfolio-title">حملة تسويقية على انستجرام</h3>
+                        <div class="portfolio-buttons">
+                            <a href="assets/work3.jpg.jpeg" data-lightbox="portfolio" data-title="حملة تسويقية على انستجرام" class="portfolio-button"><i class="fas fa-search-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                 <div class="portfolio-item web" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="portfolio-image" style="background-image: url(\'assets/work4.jpg.jpeg\');"></div>
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category">تصميم مواقع</span>
+                        <h3 class="portfolio-title">تطوير متجر إلكتروني</h3>
+                        <div class="portfolio-buttons">
+                            <a href="assets/work4.jpg.jpeg" data-lightbox="portfolio" data-title="تطوير متجر إلكتروني" class="portfolio-button"><i class="fas fa-search-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                 <div class="portfolio-item branding" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="portfolio-image" style="background-image: url(\'assets/work5.jpg.jpeg\');"></div>
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category">هوية بصرية</span>
+                        <h3 class="portfolio-title">إعادة تصميم هوية لشركة قائمة</h3>
+                        <div class="portfolio-buttons">
+                            <a href="assets/work5.jpg.jpeg" data-lightbox="portfolio" data-title="إعادة تصميم هوية لشركة قائمة" class="portfolio-button"><i class="fas fa-search-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                 <div class="portfolio-item social" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="portfolio-image" style="background-image: url(\'assets/work1.jpg.jpeg\');"></div> <!-- Placeholder: Use another image -->
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category">تواصل اجتماعي</span>
+                        <h3 class="portfolio-title">إدارة حملة فيسبوك</h3>
+                        <div class="portfolio-buttons">
+                            <a href="assets/work1.jpg.jpeg" data-lightbox="portfolio" data-title="إدارة حملة فيسبوك" class="portfolio-button"><i class="fas fa-search-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>فريقنا المحترف</h2>
+                <p>تعرف على الخبراء الذين يقفون وراء نجاح Ad Nova.</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-member" data-aos="fade-up" data-aos-delay="100">
+                    <div class="team-image-wrapper">
+                        <img src="assets/team1.jpg" alt="عضو فريق 1" class="team-image">
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">اسم العضو الأول</h3>
+                        <p class="team-position">خبير تسويق رقمي</p>
+                        <div class="team-social">
+                            <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member" data-aos="fade-up" data-aos-delay="200">
+                     <div class="team-image-wrapper">
+                        <img src="assets/team2.jpg" alt="عضو فريق 2" class="team-image">
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">اسم العضو الثاني</h3>
+                        <p class="team-position">مصمم جرافيك</p>
+                         <div class="team-social">
+                            <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" target="_blank" aria-label="Behance"><i class="fab fa-behance"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member" data-aos="fade-up" data-aos-delay="300">
+                     <div class="team-image-wrapper">
+                        <img src="assets/team3.jpg" alt="عضو فريق 3" class="team-image">
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">اسم العضو الثالث</h3>
+                        <p class="team-position">مطور ويب</p>
+                         <div class="team-social">
+                            <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" target="_blank" aria-label="Github"><i class="fab fa-github"></i></a>
+                            <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                 <div class="team-member" data-aos="fade-up" data-aos-delay="400">
+                     <div class="team-image-wrapper">
+                        <!-- Using downloaded image -->
+                        <img src="images/marketing_team_overhead.jpeg" alt="عضو فريق 4" class="team-image">
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">اسم العضو الرابع</h3>
+                        <p class="team-position">أخصائي SEO</p>
+                         <div class="team-social">
+                            <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>ماذا يقول عملاؤنا</h2>
+                <p>شهادات نفخر بها من عملائنا الراضين عن خدماتنا.</p>
+            </div>
+            <div class="testimonials-slider" data-aos="fade-up">
+                <div class="testimonial-item">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"خدمة احترافية ونتائج مذهلة! فريق Ad Nova ساعدنا على زيادة مبيعاتنا بشكل كبير خلال فترة قصيرة."
+                        </p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/customer1.jpg" alt="عميل 1"> <!-- Placeholder image -->
+                        <div class="author-info">
+                            <h4>اسم العميل الأول</h4>
+                            <span class="author-position">مدير شركة XYZ</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                     <div class="testimonial-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"تعامل راقي وفريق مبدع. قاموا بتصميم هوية بصرية رائعة لمشروعنا الجديد."
+                        </p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/customer2.jpg" alt="عميل 2"> <!-- Placeholder image -->
+                        <div class="author-info">
+                            <h4>اسم العميل الثاني</h4>
+                            <span class="author-position">صاحب متجر ABC</span>
+                        </div>
+                    </div>
+                </div>
+                 <div class="testimonial-item">
+                     <div class="testimonial-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"التزام بالمواعيد وشفافية في العمل. ننصح بالتعامل مع Ad Nova لتحسين التواجد الرقمي."
+                        </p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/customer3.jpg" alt="عميل 3"> <!-- Placeholder image -->
+                        <div class="author-info">
+                            <h4>اسم العميل الثالث</h4>
+                            <span class="author-position">مسؤول تسويق في LMN</span>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Add more testimonials as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats-section">
+        <div class="container stats-container">
+            <div class="stats-item" data-aos="fade-up">
+                <div class="stats-icon"><i class="fas fa-users"></i></div>
+                <div class="stats-number" data-target="1500">0</div>
+                <div class="stats-label">زائر شهري للموقع</div>
+            </div>
+            <div class="stats-item" data-aos="fade-up" data-aos-delay="100">
+                <div class="stats-icon"><i class="fas fa-chart-pie"></i></div>
+                <div class="stats-number" data-target="95">0</div>
+                <div class="stats-label">نسبة رضا العملاء (%)</div>
+            </div>
+            <div class="stats-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="stats-icon"><i class="fas fa-project-diagram"></i></div>
+                <div class="stats-number" data-target="120">0</div>
+                <div class="stats-label">حملة تسويقية ناجحة</div>
+            </div>
+            <div class="stats-item" data-aos="fade-up" data-aos-delay="300">
+                <div class="stats-icon"><i class="fas fa-trophy"></i></div>
+                <div class="stats-number" data-target="10">0</div>
+                <div class="stats-label">جوائز وتقديرات</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages" class="packages">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>باقاتنا</h2>
+                <p>اختر الباقة التي تناسب احتياجات عملك وميزانيتك.</p>
+            </div>
+            <div class="packages-grid">
+                <div class="package-card" data-aos="fade-up">
+                    <div class="package-header">
+                        <h3 class="package-name">الباقة الأساسية</h3>
+                        <div class="package-price">500 <span>₪ / شهرياً</span></div>
+                    </div>
+                    <div class="package-features">
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> إدارة صفحتين تواصل اجتماعي</li>
+                            <li><i class="fas fa-check-circle"></i> 10 تصاميم شهرياً</li>
+                            <li><i class="fas fa-check-circle"></i> تقرير أداء شهري</li>
+                            <li><i class="fas fa-times-circle"></i> حملات إعلانية مدفوعة</li>
+                            <li><i class="fas fa-times-circle"></i> تحسين SEO أساسي</li>
+                        </ul>
+                    </div>
+                    <div class="package-button">
+                        <a href="#contact" class="btn btn-outline">اطلب الآن</a>
+                    </div>
+                </div>
+                <div class="package-card vip" data-aos="fade-up" data-aos-delay="100">
+                    <div class="popular-badge">الأكثر شيوعاً</div>
+                    <div class="package-header">
+                        <h3 class="package-name">الباقة المتقدمة</h3>
+                        <div class="package-price">1200 <span>₪ / شهرياً</span></div>
+                    </div>
+                    <div class="package-features">
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> إدارة 4 صفحات تواصل اجتماعي</li>
+                            <li><i class="fas fa-check-circle"></i> 20 تصميم شهرياً + فيديو قصير</li>
+                            <li><i class="fas fa-check-circle"></i> إدارة حملات إعلانية (ميزانية منفصلة)</li>
+                            <li><i class="fas fa-check-circle"></i> تحسين SEO متقدم</li>
+                            <li><i class="fas fa-check-circle"></i> تقرير أداء تفصيلي</li>
+                        </ul>
+                    </div>
+                    <div class="package-button">
+                        <a href="#contact" class="btn btn-primary">اطلب الآن</a>
+                    </div>
+                </div>
+                <div class="package-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="package-header">
+                        <h3 class="package-name">الباقة الشاملة</h3>
+                        <div class="package-price">2500 <span>₪ / شهرياً</span></div>
+                    </div>
+                    <div class="package-features">
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> إدارة جميع منصات التواصل</li>
+                            <li><i class="fas fa-check-circle"></i> 30 تصميم + فيديوهات احترافية</li>
+                            <li><i class="fas fa-check-circle"></i> إدارة حملات إعلانية شاملة</li>
+                            <li><i class="fas fa-check-circle"></i> تحسين SEO شامل وتطوير الموقع</li>
+                            <li><i class="fas fa-check-circle"></i> استشارات تسويقية ودعم فني</li>
+                        </ul>
+                    </div>
+                    <div class="package-button">
+                        <a href="#contact" class="btn btn-outline">اطلب الآن</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>الأسئلة الشائعة</h2>
+                <p>نجيب على أكثر الأسئلة شيوعاً حول خدماتنا وعملنا.</p>
+            </div>
+            <div class="faq-container" data-aos="fade-up">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>ما هي الخدمات الرئيسية التي تقدمونها؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>نقدم مجموعة واسعة من خدمات التسويق الرقمي تشمل إدارة وسائل التواصل الاجتماعي، تصميم الهويات البصرية، حملات جوجل الإعلانية، تصميم وتطوير المواقع، تحسين محركات البحث (SEO)، وإنتاج المحتوى المرئي.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>أين يقع مقر شركتكم؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>يقع مقرنا الرئيسي في مدينة نابلس، فلسطين. ونقدم خدماتنا للعملاء في جميع أنحاء فلسطين وخارجها.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>كيف يمكنني البدء بالعمل معكم؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>يمكنك البدء بالتواصل معنا عبر نموذج الاتصال في الأسفل أو عبر معلومات الاتصال الموضحة. سنقوم بتحديد موعد لمناقشة احتياجاتك وأهدافك، ثم سنقدم لك عرضاً مخصصاً.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>ما هي أسعار خدماتكم؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>نقدم باقات أسعار متنوعة تبدأ من 500 شيكل شهرياً لتناسب مختلف الاحتياجات والميزانيات. يمكنك الاطلاع على قسم الباقات لمزيد من التفاصيل أو التواصل معنا للحصول على عرض سعر مخصص.</p>
+                    </div>
+                </div>
+                 <div class="faq-item">
+                    <div class="faq-question">
+                        <span>هل تقدمون ضمانات على النتائج؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>نحن نلتزم بتقديم أفضل خدمة ممكنة واستخدام استراتيجيات مثبتة لتحقيق أهدافك. بينما لا يمكن ضمان نتائج محددة في التسويق الرقمي بسبب طبيعته المتغيرة، فإننا نضمن الشفافية في العمل والتقارير الدورية التي توضح التقدم المحرز والعائد على الاستثمار.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>تواصل معنا</h2>
+                <p>هل لديك استفسار أو مشروع جديد؟ نحن هنا للمساعدة.</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <h3>معلومات الاتصال</h3>
+                    <p>لا تتردد في التواصل معنا عبر القنوات التالية:</p>
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="contact-text">
+                                <h4>العنوان</h4>
+                                <p>شارع رئيسي، نابلس، فلسطين</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                            <div class="contact-text">
+                                <h4>الهاتف</h4>
+                                <p>+970 XXX XXXXXX</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="contact-text">
+                                <h4>البريد الإلكتروني</h4>
+                                <p>info@adnova.ps</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                            <div class="contact-text">
+                                <h4>أوقات العمل</h4>
+                                <p>الأحد - الخميس: 9:00 صباحاً - 5:00 مساءً</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>تابعنا على</h3>
+                    <div class="contact-social">
+                        <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form" data-aos="fade-left">
+                    <h3>أرسل لنا رسالة</h3>
+                    <form id="contact-form" action="send_email.php" method="POST"> <!-- Updated action -->
+                        <div class="form-group">
+                            <label for="name">الاسم الكامل</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">البريد الإلكتروني</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">الموضوع</label>
+                            <input type="text" id="subject" name="subject" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">رسالتك</label>
+                            <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">إرسال الرسالة</button>
+                        <div id="form-message" style="margin-top: 15px;"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3><i class="fas fa-phone"></i> اتصل بنا</h3>
-                <p>+966 123 456 789</p>
-                <p>info@adnova.com</p>
+        <div class="container footer-container">
+            <div class="footer-logo">
+                <img src="assets/Logo.png" alt="Ad Nova Logo">
+                <p>Ad Nova - شريكك الرقمي في نابلس، فلسطين.</p>
             </div>
-            <div class="footer-section">
-                <h3><i class="fas fa-share-alt"></i> تابعنا</h3>
-                <div class="social-icons">
-                    <a href="#" onclick="trackEvent('Social', 'Click', 'Facebook')"><i class="fab fa-facebook"></i></a>
-                    <a href="#" onclick="trackEvent('Social', 'Click', 'Instagram')"><i class="fab fa-instagram"></i></a>
-                    <a href="#" onclick="trackEvent('Social', 'Click', 'Twitter')"><i class="fab fa-twitter"></i></a>
-                    <a href="#" onclick="trackEvent('Social', 'Click', 'LinkedIn')"><i class="fab fa-linkedin"></i></a>
+            <div class="footer-sections">
+                <div class="footer-section">
+                    <h3><i class="fas fa-info-circle"></i> عن الشركة</h3>
+                    <ul>
+                        <li><a href="#about">من نحن</a></li>
+                        <li><a href="#services">خدماتنا</a></li>
+                        <li><a href="#portfolio">أعمالنا</a></li>
+                        <li><a href="#team">فريقنا</a></li>
+                        <li><a href="#packages">الباقات</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3><i class="fas fa-link"></i> روابط سريعة</h3>
+                    <ul>
+                        <li><a href="#testimonials">آراء العملاء</a></li>
+                        <li><a href="#faq">الأسئلة الشائعة</a></li>
+                        <li><a href="#contact">تواصل معنا</a></li>
+                        <li><a href="#">سياسة الخصوصية</a></li>
+                        <li><a href="#">الشروط والأحكام</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3><i class="fas fa-envelope"></i> تواصل معنا</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> شارع رئيسي، نابلس، فلسطين</p>
+                    <p><i class="fas fa-phone-alt"></i> +970 XXX XXXXXX</p>
+                    <p><i class="fas fa-envelope"></i> info@adnova.ps</p>
+                    <p><i class="fas fa-clock"></i> الأحد - الخميس: 9ص - 5م</p>
                 </div>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2023 AD Nova. جميع الحقوق محفوظة.</p>
+            <div class="footer-bottom">
+                <p>جميع الحقوق محفوظة &copy; 2025 Ad Nova</p>
+                <div class="footer-links">
+                    <a href="#">سياسة الخصوصية</a>
+                    <a href="#">الشروط والأحكام</a>
+                </div>
+            </div>
         </div>
     </footer>
 
+  
+    <!-- Notification System -->
+    <div id="notification-system"></div>
 
-    <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox.min.js"></script>
+    <!-- Lightbox Overlay (Structure remains the same) -->
+    <div class="lightbox-overlay">
+        <!-- ... lightbox content ... -->
+    </div>
+
+    <!-- Blog Popup (Structure remains the same) -->
+    <div class="blog-popup">
+         <!-- ... blog popup content ... -->
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    
+    <!-- Custom JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
