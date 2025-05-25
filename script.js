@@ -304,12 +304,13 @@ function initTestimonialsSlider() {
 }
 
 // تهيئة نموذج الاتصال
+// تهيئة نموذج الاتصال (مُعدل لـ Netlify Forms مع AJAX)
 function initContactForm() {
     const contactForm = document.getElementById('contact-form');
     const formMessage = document.getElementById('form-message');
-    
+
     if (contactForm) {
-        // إضافة تأثيرات للحقول عند التركيز
+        // إضافة تأثيرات للحقول عند التركيز (نفس الكود السابق)
         const formInputs = contactForm.querySelectorAll('input, textarea');
         formInputs.forEach(input => {
             input.addEventListener('focus', function() {
@@ -322,83 +323,97 @@ function initContactForm() {
                 }
             });
             
-            // تحقق إذا كان الحقل يحتوي على قيمة عند التحميل
             if (input.value !== '') {
                 input.parentElement.classList.add('focused');
             }
         });
-        
+
         contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // التحقق من صحة النموذج
+            e.preventDefault(); // منع الإرسال الافتراضي
+
+            // التحقق من صحة النموذج (نفس الكود السابق)
             if (!validateForm(contactForm)) {
                 return;
             }
-            
-            // إظهار رسالة التحميل
+
+            // إظهار رسالة التحميل (نفس الكود السابق)
             formMessage.innerHTML = '<div class="alert alert-info">جاري إرسال رسالتك... <i class="fas fa-spinner fa-spin"></i></div>';
-            
+
             // جمع بيانات النموذج
             const formData = new FormData(contactForm);
-            
-            // إضافة تأثير تعطيل النموذج أثناء الإرسال
+            // تحويل FormData إلى صيغة URL-encoded المطلوبة لـ Netlify AJAX
+            const encodedData = new URLSearchParams(formData).toString();
+
+            // إضافة تأثير تعطيل النموذج أثناء الإرسال (نفس الكود السابق)
             const submitButton = contactForm.querySelector('button[type="submit"]');
             const originalButtonText = submitButton.innerHTML;
             submitButton.disabled = true;
             submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> جاري الإرسال...';
-            
-            // إرسال البيانات باستخدام Fetch API
-            fetch(contactForm.getAttribute('action'), {
+
+            // إرسال البيانات باستخدام Fetch API إلى نفس الصفحة (كما يتطلب Netlify AJAX)
+            fetch(window.location.pathname, { // أو يمكنك استخدام "/" إذا كان النموذج دائمًا في الصفحة الرئيسية
                 method: 'POST',
-                body: formData
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, // مهم لـ Netlify
+                body: encodedData
             })
-            .then(response => response.json())
-            .then(data => {
-                if (data.status === 'success') {
+            .then(response => {
+                if (response.ok) { // تحقق إذا كان الرد ناجحًا (status 2xx)
                     // إظهار رسالة النجاح
-                    formMessage.innerHTML = `<div class="alert alert-success"><i class="fas fa-check-circle"></i> ${data.message}</div>`;
+                    formMessage.innerHTML = '<div class="alert alert-success"><i class="fas fa-check-circle"></i> تم إرسال رسالتك بنجاح! شكراً لك.</div>';
                     contactForm.reset();
-                    
-                    // إعادة تعيين حالة الحقول
+
+                    // إعادة تعيين حالة الحقول (نفس الكود السابق)
                     formInputs.forEach(input => {
                         input.parentElement.classList.remove('focused');
                     });
-                    
-                    // إظهار إشعار النجاح
-                    showNotification('تم الإرسال بنجاح', 'تم إرسال رسالتك بنجاح وسنتواصل معك قريباً.', 'success');
-                    
-                    // إضافة تأثير نجاح للنموذج
+
+                    // إظهار إشعار النجاح (إذا كانت الدالة موجودة)
+                    if (typeof showNotification === 'function') {
+                        showNotification('تم الإرسال بنجاح', 'تم إرسال رسالتك بنجاح وسنتواصل معك قريباً.', 'success');
+                    }
+
+                    // إضافة تأثير نجاح للنموذج (نفس الكود السابق)
                     contactForm.classList.add('form-success');
                     setTimeout(() => {
                         contactForm.classList.remove('form-success');
                     }, 3000);
                 } else {
-                    // إظهار رسالة الخطأ
-                    formMessage.innerHTML = `<div class="alert alert-danger"><i class="fas fa-exclamation-circle"></i> ${data.message}</div>`;
-                    
-                    // إظهار إشعار الخطأ
-                    showNotification('خطأ في الإرسال', data.message, 'error');
-                    
-                    // إضافة تأثير خطأ للنموذج
+                    // حدث خطأ ما (قد يكون خطأ في Netlify أو خطأ آخر)
+                    // يمكنك محاولة قراءة نص الخطأ إذا كان متاحًا
+                    response.text().then(text => {
+                         formMessage.innerHTML = `<div class="alert alert-danger"><i class="fas fa-exclamation-circle"></i> حدث خطأ أثناء الإرسال. يرجى المحاولة مرة أخرى. (${response.status}: ${text || 'لا توجد تفاصيل'})</div>`;
+                         if (typeof showNotification === 'function') {
+                            showNotification('خطأ في الإرسال', `حدث خطأ أثناء الإرسال (${response.status}). يرجى المحاولة مرة أخرى.`, 'error');
+                         }
+                    }).catch(() => {
+                        // إذا فشلت قراءة النص أيضًا
+                        formMessage.innerHTML = `<div class="alert alert-danger"><i class="fas fa-exclamation-circle"></i> حدث خطأ أثناء الإرسال. يرجى المحاولة مرة أخرى. (Status: ${response.status})</div>`;
+                         if (typeof showNotification === 'function') {
+                            showNotification('خطأ في الإرسال', `حدث خطأ أثناء الإرسال (${response.status}). يرجى المحاولة مرة أخرى.`, 'error');
+                         }
+                    });
+                   
+                    // إضافة تأثير خطأ للنموذج (نفس الكود السابق)
                     contactForm.classList.add('form-error');
                     setTimeout(() => {
                         contactForm.classList.remove('form-error');
                     }, 3000);
                 }
                 
-                // إعادة تفعيل زر الإرسال
+                // إعادة تفعيل زر الإرسال (نفس الكود السابق)
                 submitButton.disabled = false;
                 submitButton.innerHTML = originalButtonText;
             })
             .catch(error => {
-                // إظهار رسالة خطأ الاتصال
+                // إظهار رسالة خطأ الاتصال (نفس الكود السابق)
                 formMessage.innerHTML = '<div class="alert alert-danger"><i class="fas fa-exclamation-triangle"></i> حدث خطأ أثناء الاتصال بالخادم. يرجى المحاولة مرة أخرى.</div>';
                 
-                // إظهار إشعار الخطأ
-                showNotification('خطأ في الاتصال', 'حدث خطأ أثناء الاتصال بالخادم. يرجى المحاولة مرة أخرى.', 'error');
+                // إظهار إشعار الخطأ (إذا كانت الدالة موجودة)
+                 if (typeof showNotification === 'function') {
+                    showNotification('خطأ في الاتصال', 'حدث خطأ أثناء الاتصال بالخادم. يرجى المحاولة مرة أخرى.', 'error');
+                 }
                 
-                // إعادة تفعيل زر الإرسال
+                // إعادة تفعيل زر الإرسال (نفس الكود السابق)
                 submitButton.disabled = false;
                 submitButton.innerHTML = originalButtonText;
             });
