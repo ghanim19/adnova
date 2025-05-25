@@ -117,7 +117,17 @@ img {
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(77, 77, 77, 0.2);
 }
-
+.btn-intro {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+.btn-intro :hover{
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(77, 77, 77, 0.2);
+}
 .btn-small {
     padding: 8px 20px;
     font-size: 14px;
